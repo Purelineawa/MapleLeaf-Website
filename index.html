@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的世界客户端</title>
+    <title>MapleLeaf Client
+    </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="banner">
-            <h1>欢迎来到我的世界客户端！</h1>
+            <h1>欢迎来到MapleLeaf官网</h1>
             <p>体验无与伦比的游戏乐趣！</p>
-            <button class="button">立即下载</button>
+            <button class="button">立即获取</button>
         </div>
     </header>
 
@@ -89,18 +90,18 @@
         // Testimonial Slider
         let currentIndex = 0;
         const testimonials = document.querySelectorAll('.testimonial-slider blockquote');
-    
+        // 显示指定索引的testimonial
         function showTestimonial(index) {
             testimonials.forEach((testimonial, i) => {
                 testimonial.classList.toggle('active', i === index);
             });
         }
-    
+        // 自动切换
         function nextTestimonial() {
             currentIndex = (currentIndex + 1) % testimonials.length;
             showTestimonial(currentIndex);
         }
-    
+        
         // 自动切换时间间隔
         setInterval(nextTestimonial, 3000);
         showTestimonial(currentIndex);
