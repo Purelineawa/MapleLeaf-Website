@@ -1,0 +1,95 @@
+/* 现有样式保持不变 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('images/banner-bg.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.banner h1 {
+    animation: fadeIn 2s ease-in;
+}
+
+.banner p {
+    animation: fadeIn 3s ease-in;
+}
+
+.button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+.introduction, .features, .testimonials, .download {
+    padding: 50px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(33% - 40px);
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+blockquote {
+    display: none;
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2em;
+}
+
+blockquote.active {
+    display: block;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+

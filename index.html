@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的世界客户端</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="banner">
+            <h1>欢迎来到我的世界客户端！</h1>
+            <p>体验无与伦比的游戏乐趣！</p>
+            <button class="button">立即下载</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="introduction">
+            <h2>关于我们的客户端</h2>
+            <p>我们的Minecraft客户端旨在为所有玩家提供最佳的游戏体验。无论你是新手还是资深玩家，这里都有适合你的功能和设置，让你尽情享受创造与冒险的乐趣。</p>
+            <p>通过我们的客户端，你将获得更高的稳定性、更少的延迟以及更多独家的工具和插件，帮助你打造理想的游戏环境。</p>
+        </section>
+
+        <section class="features">
+            <h2>客户端特色</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <img src="images/feature1.jpg" alt="自定义皮肤">
+                    <h3>自定义皮肤</h3>
+                    <p>随心所欲地打造自己的角色形象，展现个性化风格。选择上千种皮肤，或自己设计属于你的独特外观。</p>
+                </div>
+                <div class="card">
+                    <img src="images/feature2.jpg" alt="多种游戏模式">
+                    <h3>多种游戏模式</h3>
+                    <p>探索生存、创造与多人模式，挑战你的极限，和好友一起合作或竞争，享受无尽的乐趣。</p>
+                </div>
+                <div class="card">
+                    <img src="images/feature3.jpg" alt="优化性能">
+                    <h3>优化性能</h3>
+                    <p>我们致力于提供流畅的游戏体验，减少卡顿和延迟，确保你能在最关键的时刻迎接挑战。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>玩家评价</h2>
+            <div class="testimonial-slider">
+                <blockquote>
+                    <img src="images/testimonial1.jpg" alt="玩家A" class="testimonial-img">
+                    “这是我玩过的最好的Minecraft客户端！从未如此愉快地进行游戏。”
+                    <footer>- 玩家A</footer>
+                </blockquote>
+                <blockquote>
+                    <img src="images/testimonial2.jpg" alt="玩家B" class="testimonial-img">
+                    “极佳的用户体验和高性能，强烈推荐给每一位Minecraft爱好者！”
+                    <footer>- 玩家B</footer>
+                </blockquote>
+                <blockquote>
+                    <img src="images/testimonial3.jpg" alt="玩家C" class="testimonial-img">
+                    “丰富的功能让我能够尽情享受游戏，真的是一次完美的体验！”
+                    <footer>- 玩家C</footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="download">
+            <h2>下载客户端</h2>
+            <p>选择你的操作系统进行快速下载：</p>
+            <div class="download-links">
+                <a href="#" class="button">Windows</a>
+                <a href="#" class="button">macOS</a>
+                <a href="#" class="button">Linux</a>
+            </div>
+            <h3>安装指南</h3>
+            <p>请按照以下步骤完成安装：</p>
+            <ol>
+                <li>点击下载按钮，获取适合你系统的安装包。</li>
+                <li>双击安装包并按照提示完成安装。</li>
+                <li>安装完成后，运行客户端。
+                <li>启动客户端，按照提示登录或创建新账号。</li>
+                <li>选择服务器并开始游戏吧！</li>
+            </ol>
+        </section>
+    </main>
+
+    <script>
+        // Testimonial Slider
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial-slider blockquote');
+    
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.toggle('active', i === index);
+            });
+        }
+    
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        }
+    
+        // 自动切换时间间隔
+        setInterval(nextTestimonial, 3000);
+        showTestimonial(currentIndex);
+    
+        // 平滑滚动到下载部分
+        const downloadButton = document.querySelector('.download-links a.button');
+        downloadButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.scrollTo({
+                top: document.querySelector('.download').offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+    
+
+</body>
+</html>
